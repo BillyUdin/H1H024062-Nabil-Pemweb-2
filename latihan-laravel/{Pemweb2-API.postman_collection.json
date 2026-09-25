@@ -1,0 +1,141 @@
+{
+  "info": {
+    "name": "Pemweb2 API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Mahasiswa",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Accept", "value": "application/json" }
+        ],
+        "url": {
+          "raw": "{{base_url}}/mahasiswa",
+          "host": ["{{base_url}}"],
+          "path": ["mahasiswa"]
+        }
+      }
+    },
+    {
+      "name": "Store Mahasiswa",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Accept", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"program_studi_id\": 1,\n  \"nim\": \"H1A125999\",\n  \"nama\": \"Dewi Anggraini\",\n  \"email\": \"dewi.anggraini@example.com\",\n  \"angkatan\": 2025,\n  \"ipk\": 3.65\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/mahasiswa",
+          "host": ["{{base_url}}"],
+          "path": ["mahasiswa"]
+        }
+      }
+    },
+    {
+      "name": "Show Mahasiswa",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Accept", "value": "application/json" }
+        ],
+        "url": {
+          "raw": "{{base_url}}/mahasiswa/1",
+          "host": ["{{base_url}}"],
+          "path": ["mahasiswa", "1"]
+        }
+      }
+    },
+    {
+      "name": "Update Mahasiswa",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Accept", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"ipk\": 3.90\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/mahasiswa/1",
+          "host": ["{{base_url}}"],
+          "path": ["mahasiswa", "1"]
+        }
+      }
+    },
+    {
+      "name": "Delete Mahasiswa",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          { "key": "Accept", "value": "application/json" }
+        ],
+        "url": {
+          "raw": "{{base_url}}/mahasiswa/1",
+          "host": ["{{base_url}}"],
+          "path": ["mahasiswa", "1"]
+        }
+      }
+    },
+    {
+      "name": "Mahasiswa by Program Studi",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Accept", "value": "application/json" }
+        ],
+        "url": {
+          "raw": "{{base_url}}/program-studi/1/mahasiswa",
+          "host": ["{{base_url}}"],
+          "path": ["program-studi", "1", "mahasiswa"]
+        }
+      }
+    },
+    {
+      "name": "Get Matakuliah",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Accept", "value": "application/json" }
+        ],
+        "url": {
+          "raw": "{{base_url}}/matakuliah",
+          "host": ["{{base_url}}"],
+          "path": ["matakuliah"]
+        }
+      }
+    },
+    {
+      "name": "Store Matakuliah",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Accept", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"kode\": \"KA1\",\n  \"nama\": \"Kecerdasan Artifisial\",\n  \"sks\": 3,\n  \"semester\": 6\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/matakuliah",
+          "host": ["{{base_url}}"],
+          "path": ["matakuliah"]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://127.0.0.1:8000/api"
+    }
+  ]
+}
